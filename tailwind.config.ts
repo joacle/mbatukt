@@ -70,7 +70,9 @@ export default {
 					teal: '#00B4D8',
 					blue: '#0077B6',
 					dark: '#0D1B2A',
-					light: '#F8F9FA'
+					light: '#F8F9FA',
+					green: '#00be64',
+					purple: '#cb6be6'
 				}
 			},
 			borderRadius: {

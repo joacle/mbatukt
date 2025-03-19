@@ -48,16 +48,16 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 py-4 px-4 md:px-8",
-        isScrolled ? "bg-white bg-opacity-90 backdrop-blur-md shadow-md py-3" : "bg-transparent"
+        "bg-white bg-opacity-90 backdrop-blur-md shadow-md py-3"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
         <a href="#hero" className="flex items-center">
           <div className={cn(
             "text-2xl font-display font-bold transition-colors duration-300",
-            isScrolled ? "text-batucada-orange" : "text-batucada-dark"
+            "text-batucada-green"
           )}>
-            Batucada Vibrante
+            Mbatuk't
           </div>
         </a>
 
@@ -77,37 +77,10 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-batucada-dark hover:text-batucada-orange transition-colors"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <X size={24} />
-          ) : (
-            <Menu size={24} />
-          )}
-        </button>
+       
       </div>
 
-      {/* Mobile Navigation */}
-      <div 
-        className={cn(
-          "fixed inset-0 z-40 bg-white bg-opacity-95 backdrop-blur-sm md:hidden flex flex-col justify-center items-center space-y-8 transition-all duration-300 transform",
-          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        )}
-      >
-        {navLinks.map((link) => (
-          <a
-            key={link.id}
-            href={link.href}
-            className="text-2xl font-medium text-batucada-dark hover:text-batucada-orange transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
+      
     </header>
   );
 };

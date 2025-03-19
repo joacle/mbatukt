@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Users, Music, Calendar, Award } from 'lucide-react';
+import aboutUs from '@/images/about-us.jpg';
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -12,7 +13,7 @@ interface FeatureProps {
 const Feature = ({ icon, title, description }: FeatureProps) => (
   <div className="glass-card scroll-watch">
     <div className="flex flex-col items-center text-center">
-      <div className="mb-4 text-batucada-orange">{icon}</div>
+      <div className="mb-4 text-batucada-green">{icon}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
@@ -95,7 +96,7 @@ const About = () => {
             </div>
             <div className="relative h-80 md:h-96 overflow-hidden rounded-xl scroll-watch">
               <img 
-                src="https://images.unsplash.com/photo-1560995252-5d8d0b37a732?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src={aboutUs}
                 alt="Batucada en acción" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />

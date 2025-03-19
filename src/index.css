@@ -26,7 +26,7 @@ body {
 
 .section-title::after {
   content: '';
-  @apply block w-16 h-1 bg-batucada-orange mt-2;
+  @apply block w-16 h-1 bg-batucada-green mt-2;
 }
 
 .glass-card {
@@ -34,8 +34,8 @@ body {
 }
 
 .btn-primary {
-  @apply bg-batucada-orange text-white px-6 py-3 rounded-lg font-medium transition-all duration-300
-    hover:bg-batucada-red hover:shadow-lg
+  @apply bg-batucada-green text-white px-6 py-3 rounded-lg font-medium transition-all duration-300
+    hover:bg-batucada-purple hover:shadow-lg
     active:transform active:scale-95;
 }
 
@@ -98,12 +98,12 @@ body {
   }
   
   .nav-link {
-    @apply relative py-1 font-medium text-batucada-dark hover:text-batucada-orange transition-colors duration-300;
+    @apply relative py-1 font-medium text-batucada-dark hover:text-batucada-green transition-colors duration-300;
   }
   
   .nav-link::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-batucada-orange transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-batucada-green transition-all duration-300;
   }
   
   .nav-link:hover::after {

@@ -1,36 +1,44 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import galleryBackground from '@/images/gallery-background.jpg';
+import gallery1 from '@/images/gallery-1.jpg';
+import gallery2 from '@/images/gallery-2.jpg';
+import gallery3 from '@/images/gallery-3.jpg';
+import gallery4 from '@/images/gallery-4.jpg';
+import gallery5 from '@/images/gallery-5.jpg';
+import gallery6 from '@/images/gallery-6.jpg';
+
+
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1552911669-41c5ecc803ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery1}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Batucada en festival",
     caption: "Festival de Verano 2022"
   },
   {
-    src: "https://images.unsplash.com/photo-1551854838-212c9a5fde6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery2}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Percusionistas en acción",
     caption: "Carnaval Urbano"
   },
   {
-    src: "https://images.unsplash.com/photo-1496449065494-95e041d67022?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery3}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Batería horizontal",
     caption: "Ensayo General"
   },
   {
-    src: "https://images.unsplash.com/photo-1595251298505-73de3d2317e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery4}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Tambores tradicionales",
     caption: "Instrumentos Tradicionales"
   },
   {
-    src: "https://images.unsplash.com/photo-1658786762873-cafbce11d2df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery5}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Concierto nocturno",
     caption: "Noche de Ritmos"
   },
   {
-    src: "https://images.unsplash.com/photo-1545959570-a94066772b63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    src: `${gallery6}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
     alt: "Grupo completo",
     caption: "El Equipo Completo"
   }
@@ -106,7 +114,7 @@ const Gallery = () => {
       id="gallery" 
       className="section-container parallax-bg py-24"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80")',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${galleryBackground})`,
       }}
     >
       <div className="container mx-auto max-w-6xl">
@@ -145,14 +153,14 @@ const Gallery = () => {
       {selectedImage !== null && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
           <button 
-            className="absolute top-4 right-4 text-white hover:text-batucada-orange transition-colors"
+            className="absolute top-4 right-4 text-white hover:text-batucada-green transition-colors"
             onClick={closeLightbox}
           >
             <X size={32} />
           </button>
           
           <button 
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-batucada-orange transition-colors"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-batucada-green transition-colors"
             onClick={() => navigate('prev')}
           >
             <ChevronLeft size={40} />
@@ -170,7 +178,7 @@ const Gallery = () => {
           </div>
           
           <button 
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-batucada-orange transition-colors"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-batucada-green transition-colors"
             onClick={() => navigate('next')}
           >
             <ChevronRight size={40} />

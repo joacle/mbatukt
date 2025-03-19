@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowDown } from 'lucide-react';
+import heroBackground from '@/images/hero-background.jpg';
 
 const Hero = () => {
   const heroRef = useRef<HTMLElement>(null);
@@ -46,7 +47,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen w-full flex flex-col justify-center items-center text-center py-20 px-4"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80")',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -58,7 +59,7 @@ const Hero = () => {
             ref={titleRef}
             className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white opacity-0"
           >
-            Batucada Vibrante
+            Mbatuk't
           </h1>
           <p 
             ref={subtitleRef}
@@ -85,9 +86,9 @@ const Hero = () => {
       </a>
       
       {/* Decorative circles */}
-      <div className="absolute top-[20%] left-[10%] w-32 h-32 rounded-full bg-batucada-orange opacity-20 mix-blend-overlay animate-pulse-subtle"></div>
-      <div className="absolute bottom-[30%] right-[15%] w-40 h-40 rounded-full bg-batucada-red opacity-20 mix-blend-overlay animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-[40%] right-[20%] w-24 h-24 rounded-full bg-batucada-yellow opacity-20 mix-blend-overlay animate-pulse-subtle" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-[20%] left-[10%] w-32 h-32 rounded-full bg-batucada-green opacity-20 mix-blend-overlay animate-pulse-subtle"></div>
+      <div className="absolute bottom-[30%] right-[15%] w-40 h-40 rounded-full bg-batucada-purple opacity-20 mix-blend-overlay animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-[40%] right-[20%] w-24 h-24 rounded-full bg-batucada-green opacity-20 mix-blend-overlay animate-pulse-subtle" style={{ animationDelay: '1.5s' }}></div>
     </section>
   );
 };
